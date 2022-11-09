@@ -73,7 +73,7 @@
     "eth-gas-reporter/colors": "1.4.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "4.7.3"
+    "@openzeppelin/contracts": "4.8.0"
   },
   "devDependencies": {
     "@codechecks/client": "0.1.12",

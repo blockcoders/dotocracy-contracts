@@ -1,16 +1,16 @@
-# Hardhat Boilerplate
+# Dotocrazy contracts
 
-## Why ?
+The process by which this community makes decisions is called on-chain governance, and it has become a central component of decentralized protocols, fueling varied decisions such as parameter integrations with other protocols, treasury management, grants, etc
+
+## Ticket
+
+The voting power of each account in the governance setup will be determined by an ERC721 token. The token has to implement the ERC721Votes extension. This extension will keep track of historical balances so that voting power is retrieved from past snapshots rather than current balance, which is an important protection that prevents double voting.
 
 Thought to have a fast way of bootstraping projects with best practice's in mind. Having linters, prettiers, standards on how to commit, and changelog creation & maintenance.
 
----
+## Ballot
 
-## How ?
-
-This is achieved using several hardhat plugins, and external known packages.
-
----
+The core logic is given by the Governor contract, the user will choose: how voting power is determined, how many votes are needed for quorum, what options people have when casting a vote and how those votes are counted, and what type of token should be used to vote. Each of these aspects are customizable.
 
 ## Setup
 
@@ -20,13 +20,6 @@ yarn install
 # Copy Env example file
 cp .env.example .env
 ```
-
-After installing dependencies and copying the example environment, you will have to update your `.env` file with
-at least you alchemy API KEY (`NODE_URI_ETHEREUM`).
-<br/>
-You can generate your API KEY in the [Alchemy site](https://www.alchemy.com).
-
----
 
 ## Tools
 
@@ -39,7 +32,6 @@ This boilerplate includes:
 - [Gas reporter](https://github.com/cgewecke/hardhat-gas-reporter/tree/master)
 - [Commitlint](https://github.com/conventional-changelog/commitlint)
 - [Standard version](https://github.com/conventional-changelog/standard-version)
-- [Uniswap](https://github.com/Uniswap/uniswap-v2-periphery) + [Internal tooling](./test/utils/uniswap.ts)
 
 ---
 
@@ -100,29 +92,6 @@ yarn release
 ```
 
 Runs standard changelog, changes package.json version and modifies CHANGELOG.md accordingly.
-<br/>
-
-### **Test**
-
-```bash
-yarn test:all
-```
-
-Runs all solidity tests.
-<br/>
-
-```bash
-yarn test:unit
-```
-
-Runs all solidity tests in folder [unit](./test/unit)
-<br/>
-
-```bash
-yarn test:e2e
-```
-
-Runs all solidity tests in folder [e2e](./test/e2e)
 <br/>
 
 ### **Gas report**
