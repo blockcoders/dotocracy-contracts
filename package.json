@@ -1,19 +1,20 @@
 {
-  "name": "hardhat-boilerplate",
+  "name": "dotocracy-contracts",
   "version": "0.0.0",
-  "description": "Hardhat boilerplate",
+  "description": "The process by which this community makes decisions is called on-chain governance",
   "keywords": [
-    "ethereum",
+    "moonbeam",
+    "polkadot",
+    "evm",
     "smart",
     "contracts",
     "test",
     "solidity",
-    "hardhat",
-    "boilerplate"
+    "hardhat"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/defi-wonderland/solidity-hardhat-boilerplate.git"
+    "url": "git+https://github.com/blockcoders/dotocracy-contracts.git"
   },
   "license": "AGPL-3.0-only",
   "contributors": [

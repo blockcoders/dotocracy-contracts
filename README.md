@@ -1,4 +1,4 @@
-# Dotocrazy contracts
+# Dotocracy contracts
 
 The process by which this community makes decisions is called on-chain governance, and it has become a central component of decentralized protocols, fueling varied decisions such as parameter integrations with other protocols, treasury management, grants, etc
 
@@ -23,7 +23,7 @@ cp .env.example .env
 
 ## Tools
 
-This boilerplate includes:
+This project includes:
 
 - [Hardhat](https://hardhat.org/)
 - [Solhint](https://github.com/protofire/solhint)
