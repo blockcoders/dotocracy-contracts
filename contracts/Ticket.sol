@@ -13,7 +13,7 @@ contract Ticket is ERC721Votes, ERC721URIStorage, Pausable, Ownable, ERC721Burna
 
   Counters.Counter private _tokenIdCounter;
 
-  constructor() ERC721('NFTVotes', 'NFTV') EIP712('NFTVotes', '1') {}
+  constructor() ERC721('DotocracyNFTVotes', 'DOTONFTV') EIP712('DotocracyNFTVotes', '1') {}
 
   function _afterTokenTransfer(
     address from,

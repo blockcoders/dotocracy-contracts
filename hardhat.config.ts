@@ -13,16 +13,18 @@ const networks: NetworksUserConfig =
         hardhat: {
           forking: {
             enabled: process.env.FORK ? true : false,
-            url: env.getNodeUrl('moonbeam'),
+            url: env.getNodeUrl('moonbase'),
           },
         },
         moonbaseAlpha: {
           url: env.getNodeUrl('moonbase_alpha'),
+          chainId: 1287,
           accounts: env.getAccounts('moonbase_alpha'),
         },
-        moonbeam: {
-          url: env.getNodeUrl('moonbeam'),
-          accounts: env.getAccounts('moonbeam'),
+        moonbase: {
+          url: env.getNodeUrl('moonbase'),
+          chainId: 1284,
+          accounts: env.getAccounts('moonbase'),
         },
       };
 
@@ -60,7 +62,7 @@ const config: HardhatUserConfig = {
     eachLine: removeConsoleLog((hre) => hre.network.name !== 'hardhat'),
   },
   etherscan: {
-    apiKey: env.getEtherscanAPIKeys(['ethereum']),
+    apiKey: env.getEtherscanAPIKeys(['moonbaseAlpha']),
   },
   typechain: {
     outDir: 'typechained',

@@ -17,7 +17,7 @@ contract Ballot is Governor, GovernorCompatibilityBravo, GovernorVotes, Governor
     uint256 quorum_,
     uint256 delay,
     uint256 period
-  ) Governor('Ballot') GovernorVotes(_token) GovernorVotesQuorumFraction(quorum_) GovernorTimelockControl(_timelock) {
+  ) Governor('DotocracyBallot') GovernorVotes(_token) GovernorVotesQuorumFraction(quorum_) GovernorTimelockControl(_timelock) {
     _delay = delay;
     _period = period;
   }
