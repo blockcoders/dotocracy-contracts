@@ -13,16 +13,16 @@ const networks: NetworksUserConfig =
         hardhat: {
           forking: {
             enabled: process.env.FORK ? true : false,
-            url: env.getNodeUrl('ethereum'),
+            url: env.getNodeUrl('moonbeam'),
           },
         },
-        kovan: {
-          url: env.getNodeUrl('kovan'),
-          accounts: env.getAccounts('kovan'),
+        moonbaseAlpha: {
+          url: env.getNodeUrl('moonbase_alpha'),
+          accounts: env.getAccounts('moonbase_alpha'),
         },
-        ethereum: {
-          url: env.getNodeUrl('ethereum'),
-          accounts: env.getAccounts('ethereum'),
+        moonbeam: {
+          url: env.getNodeUrl('moonbeam'),
+          accounts: env.getAccounts('moonbeam'),
         },
       };
 
@@ -67,7 +67,7 @@ const config: HardhatUserConfig = {
     target: 'ethers-v5',
   },
   paths: {
-    sources: './solidity',
+    sources: './contracts',
   },
 };
 
