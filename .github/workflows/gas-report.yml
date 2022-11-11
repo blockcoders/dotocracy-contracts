@@ -37,7 +37,7 @@ jobs:
       - name: Run gas tests
         run: yarn test:gas
         env:
-          NODE_URI_ETHEREUM: https://eth-mainnet.alchemyapi.io/v2/${{ secrets.ALCHEMYKEY }}
+          NODE_URI_MOONBASE_ALPHA: https://rpc.api.moonbase.moonbeam.network
 
       - name: Run eth gas reporter
         run: npx codechecks
